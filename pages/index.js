@@ -1,6 +1,7 @@
 import Head from "next/head";
 
 import Header from "../Components/Header/Header";
+import HomePageCTA from "../Components/Call_To_Actions/HomePageCTAs/HomePageCTA";
 
 export default function Home() {
   return (
@@ -11,8 +12,17 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main>
+      <main
+        className="bg-scroll min-h-screen"
+        style={{
+          backgroundImage: `url(https://images.unsplash.com/photo-1624880056139-d1212d7ff347?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80)`,
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "auto 100%",
+          backgroundSize: "cover",
+        }}
+      >
         <Header />
+        <HomePageCTA />
       </main>
     </>
   );

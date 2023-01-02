@@ -6,7 +6,7 @@ import RightMenuHeader from "./RightMenu_Header";
 
 export default function Header() {
   return (
-    <div className="flex justify-between">
+    <div className="flex justify-between items-center h-16">
       <LogoHeader />
       <MainMenuHeader />
       <RightMenuHeader />
