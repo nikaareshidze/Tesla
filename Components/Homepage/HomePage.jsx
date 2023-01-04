@@ -1,4 +1,5 @@
 import React from "react";
+import { useDispatch, useSelector } from "react-redux";
 
 import homepageData from "./homepageData";
 import HomepageDataElement from "./HomePageElement";
@@ -9,12 +10,14 @@ export default function HomePage() {
     <HomepageDataElement data={data} />
   ));
 
+  const { shown } = useSelector((state) => state.navbarMenuSlice);
+
   return (
     <div
       style={{
         height: "100vh",
         scrollSnapType: "y mandatory",
-        overflowY: "scroll",
+        overflowY: `${shown ? "hidden" : "scroll"}`,
       }}
     >
       {homepageDataElement}
