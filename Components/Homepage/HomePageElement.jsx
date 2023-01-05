@@ -18,10 +18,12 @@ export default function HomepageDataElement({ data }) {
       }}
     >
       <Header />
-      <div className="flex flex-col justify-around items-center h-full">
+      <div className="flex flex-col justify-between items-center h-full my-16">
         <div className="flex flex-col items-center justify-center">
-          <h1 className="text-4xl">{data.title}</h1>
-          <h1 className="text-base">{data.description}</h1>
+          <h1 className="text-5xl">{data.title}</h1>
+          <h1 className="text-base underline underline-offset-4">
+            {data.description}
+          </h1>
         </div>
         <HomePageCTA />
       </div>
